@@ -1,4 +1,4 @@
-/* Reset and basics */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -11,64 +11,51 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
   background: #f0f4f8;
   color: #333;
-  padding-top: 160px; /* space for fixed header + nav */
-  line-height: 1.6;
+  padding-top: 120px; /* Offset for fixed nav */
 }
 
-/* Header with centered logo - fixed */
-.site-header {
-  background: #f4eacd;
-  text-align: center;
-  padding: 20px 0 10px;
+/* Navigation Bar */
+nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 1001; /* above nav */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.site-header a {
-  text-decoration: none;
-}
-
-.site-logo {
-  height: 80px;
-  width: auto;
-}
-
-/* Navigation - fixed below header */
-nav {
-  position: fixed;
-  top: 100px; /* height of header */
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: fit-content;
+  margin: 0 auto;
   background: #f4eacd;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   z-index: 1000;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
 .nav-container {
   display: flex;
-  justify-content: center;
-  padding: 10px 0;
+  align-items: center;
+  gap: 30px;
+}
+
+nav .logo {
+  height: 50px;
+  width: auto;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .nav-links li a {
   color: #333;
   text-decoration: none;
   font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 5px;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 6px;
   transition: background 0.3s;
 }
 
@@ -76,15 +63,33 @@ nav {
   background-color: #ddd6b8;
 }
 
-/* Main content */
-main {
+/* Header, Main, Footer Styling */
+header, main, footer {
   max-width: 900px;
   margin: auto;
   padding: 20px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: block;
+  max-width: 100%;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  color: #0066cc;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  color: #333;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 
 section + section {
@@ -96,14 +101,9 @@ h2 {
   margin-bottom: 10px;
 }
 
-h3 {
-  color: #004a99;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
 ul {
   padding-left: 20px;
+  list-style-type: disc;
 }
 
 a {
@@ -115,23 +115,21 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
 footer {
   text-align: center;
   font-size: 0.9em;
   color: #666;
-  padding-bottom: 20px;
 }
 
-/* Responsive */
+/* Responsive tweaks */
 @media (max-width: 768px) {
-  .nav-links {
+  .nav-container {
     flex-direction: column;
-    align-items: center;
     gap: 10px;
   }
 
-  body {
-    padding-top: 200px; /* extra space for stacked header+nav on small */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
   }
 }
