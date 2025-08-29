@@ -13,15 +13,21 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f0f4f8;
   color: #333;
-  padding-top: 160px; /* space for header + nav */
+  padding-top: 160px; /* space for fixed header + nav */
   line-height: 1.6;
 }
 
-/* Header with centered logo */
+/* Header with centered logo - fixed */
 .site-header {
   background: #f4eacd;
   text-align: center;
   padding: 20px 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001; /* above nav */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .site-header a {
@@ -33,10 +39,12 @@ body {
   width: auto;
 }
 
-/* Navigation */
+/* Navigation - fixed below header */
 nav {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 100px; /* height of header */
+  left: 0;
+  width: 100%;
   background: #f4eacd;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   z-index: 1000;
@@ -124,6 +132,6 @@ footer {
   }
 
   body {
-    padding-top: 200px;
+    padding-top: 200px; /* extra space for stacked header+nav on small */
   }
 }
