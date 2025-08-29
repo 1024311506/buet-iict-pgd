@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Sign Up - BUET IICT PGD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html">
+      <img src="iict_buet_logo.png" alt="BUET IICT Logo" class="site-logo" />
+    </a>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About IICT</a></li>
+        <li><a href="signup.html" class="active">Sign Up</a></li>
+        <li><a href="students.html">Students</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h2>Create Student Account</h2>
+    <form id="signup-form">
+      <label for="name">Full Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email Address:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" required /><br /><br />
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p id="message" style="color: green; margin-top: 15px;"></p>
+  </main>
+
+  <footer>
+    &copy; 2025 BUET IICT Postgraduate Diploma Program
+  </footer>
+
+  <script>
+    const form = document.getElementById("signup-form");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const password = form.password.value; // only for simulation
+
+      if (!name || !email || !password) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      const users = JSON.parse(localStorage.getItem("buetUsers") || "[]");
+
+      if (users.some(u => u.email.toLowerCase() === email.toLowerCase())) {
+        alert("Email already registered. Please use another email.");
+        return;
+      }
+
+      users.push({ name, email });
+
+      localStorage.setItem("buetUsers", JSON.stringify(users));
+
+      message.textContent = "Account created successfully!";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
