@@ -19,7 +19,7 @@ body {
 
 /* Fixed header with centered logo */
 .site-header {
-  position: fixed; /* or absolute, depending on your layout */
+  position: fixed;
   top: 0;
   margin-left: 293px;
   max-width: 900px;
@@ -41,38 +41,25 @@ body {
 @media (max-width: 990px) {
   .site-header {
     padding: 0;
-    justify-content: center; /* center logo */
     margin-left: 0;
+    justify-content: center;
   }
 
   .site-logo {
-    height: 60px; /* smaller logo on smaller screens */
+    height: 60px;
   }
 }
 
 /* Fixed nav below header */
 nav {
   position: fixed;
-  top: 80px; /* height of header */
-  left: 0;
-  width: 100%;
   max-width: 900px;
   margin-left: 293px;
+  top: 80px;
+  left: 0;
+  width: 100%;
   background: #f4eacd;
   z-index: 1000;
-  overflow-x: auto; /* horizontal scroll if needed */
-}
-
-@media (max-width: 990px) {
-  nav {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  nav {
-    top: 60px; /* less space on mobile */
-  }
 }
 
 .nav-container {
@@ -81,34 +68,25 @@ nav {
   align-items: center;
   flex-direction: row;
   padding: 10px 0;
+  gap: 20px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
-  flex-wrap: nowrap; /* No wrapping, keep all in one row */
-  overflow-x: auto;  /* scroll horizontally if needed */
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-  scrollbar-width: none; /* Firefox */
-}
-
-.nav-links::-webkit-scrollbar {
-  display: none; /* hide scrollbar for WebKit browsers */
-}
-
-.nav-links li {
-  flex: 0 0 auto; /* keep items from shrinking */
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
 .nav-links li a {
   color: #333;
   text-decoration: none;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 6px 8px; /* Reduced horizontal padding */
   border-radius: 5px;
   transition: background 0.3s;
-  white-space: nowrap; /* prevent text wrap */
+  white-space: nowrap;
+  font-size: 14px; /* Smaller font size */
 }
 
 .nav-links li a:hover,
@@ -173,12 +151,27 @@ footer {
 
 /* Responsive layout */
 @media (max-width: 768px) {
+  nav {
+    margin-left: 0;
+    top: 60px; /* Changed as requested */
+  }
+  
   .nav-container {
     justify-content: flex-start;
     padding-left: 10px;
+    gap: 8px; /* Reduced gap */
   }
 
   .nav-links {
-    gap: 10px;
+    gap: 8px;
+  }
+
+  .nav-links li a {
+    font-size: 12px; /* Even smaller font on mobile */
+    padding: 6px 6px;
+  }
+  
+  .site-header {
+    margin-left: 0;
   }
 }
