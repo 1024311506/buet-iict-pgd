@@ -120,8 +120,8 @@ section + section {
   margin-top: 20px;
 }
 
-h1, h2, h3 {
-  color: #0066cc;
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(160, 27, 48);
   margin-bottom: 10px;
 }
 
@@ -198,9 +198,11 @@ footer {
   height: auto;
 }
 
-.h3{
-  text-align: center;}
+h3{
+  text-align: center;
+}
     
+
 
 
 
