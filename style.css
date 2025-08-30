@@ -13,15 +13,15 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f0f4f8;
   color: #333;
-  line-height: 1.6;
-  padding-top: 160px; /* space for fixed header + nav */
+  line-height: 1.5;
+  padding-top: 150px; /* space for fixed header + nav */
 }
 
 /* Fixed header with centered logo */
 .site-header {
   position: fixed; /* or absolute, depending on your layout */
   top: 0;
-  margin-left: 290px;
+  margin-left: 293px;
   max-width: 900px;
   left: 0;
   width: 100%;
@@ -54,7 +54,7 @@ justify-content: center;
 nav {
   position: fixed;
   max-width: 900px;
-   margin-left: 290px;
+   margin-left: 293px;
   top: 80px; /* height of header */
   left: 0;
   width: 100%;
@@ -197,6 +197,7 @@ footer {
   width: 100%;
   height: auto;
 }
+
 
 
 
