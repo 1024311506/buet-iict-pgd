@@ -103,7 +103,7 @@ section + section {
   margin-top: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h4 {
   color: rgb(160, 27, 48);
   margin-bottom: 10px;
 }
@@ -150,8 +150,8 @@ footer {
     justify-content: center;
     gap: 10px;           /* smaller gap on small screens */
   }
-  
-  /* Adjust padding if needed */
+
+  /* Slightly reduce top padding for smaller screens */
   body {
     padding-top: 140px;
   }
