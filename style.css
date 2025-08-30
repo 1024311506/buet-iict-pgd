@@ -1,4 +1,4 @@
-/* === Base Reset === */
+/* Reset and basics */
 * {
   margin: 0;
   padding: 0;
@@ -14,21 +14,24 @@ body {
   background: #f0f4f8;
   color: #333;
   line-height: 1.5;
-  padding-top: 150px;
+  padding-top: 150px; /* space for fixed header + nav */
 }
 
-/* === Header === */
+/* Fixed header with centered logo */
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   background: #f4eacd;
   padding: 0;
-  z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1001;
 }
 
 .site-logo {
@@ -36,19 +39,24 @@ body {
   width: auto;
 }
 
-/* Responsive Header */
 @media (max-width: 990px) {
+  .site-header {
+    padding: 0;
+  }
   .site-logo {
     height: 60px;
   }
 }
 
-/* === Navigation === */
+/* Fixed nav below header */
 nav {
   position: fixed;
-  top: 80px;
+  top: 80px; /* height of header */
   left: 0;
   width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   background: #f4eacd;
   z-index: 1000;
 }
@@ -57,18 +65,20 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   padding: 10px 0;
   gap: 20px;
 }
 
+/* Nav links - horizontal by default */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* Nav links styling */
 .nav-links li a {
   color: #333;
   text-decoration: none;
@@ -83,18 +93,7 @@ nav {
   background-color: #ddd6b8;
 }
 
-/* === Hamburger Toggle (Mobile) === */
-.nav-toggle {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  padding: 6px 12px;
-}
-
-/* === Main Content === */
+/* Main content area */
 main {
   max-width: 900px;
   margin: auto;
@@ -103,6 +102,10 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+}
+
+section + section {
+  margin-top: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -124,6 +127,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Image styling */
 img {
   max-width: 100%;
   height: auto;
@@ -135,7 +139,7 @@ img {
   margin-bottom: 20px;
 }
 
-/* === Footer === */
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.9em;
@@ -143,45 +147,15 @@ footer {
   padding: 20px 0;
 }
 
-/* === Responsive Navigation === */
+/* Responsive layout: stack nav links vertically on small screens */
 @media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
   .nav-links {
     flex-direction: column;
-    display: none;
-    width: 100%;
-    text-align: center;
-    gap: 0;
-    background: #f4eacd;
+    align-items: center;
+    gap: 10px;
   }
-
-  .nav-links li {
-    width: 100%;
-    border-top: 1px solid #ddd;
-  }
-
-  .nav-links li a {
-    display: block;
-    padding: 12px;
-  }
-
-  .nav-links.nav-open {
-    display: flex;
-  }
-
-  body {
-    padding-top: 220px;
-  }
-
   .ece {
     width: 100%;
+    height: auto;
   }
 }
