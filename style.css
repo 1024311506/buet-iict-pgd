@@ -38,6 +38,16 @@ body {
   height: 80px;
   width: auto;
 }
+@media (max-width: 990px) {
+  .site-header {
+    padding: 0;
+    justify-content: center; /* already in base, but good to reinforce */
+  }
+
+  .site-logo {
+    height: 60px; /* optional: scale logo down for smaller screens */
+  }
+}
 
 /* Fixed nav below header */
 nav {
@@ -184,4 +194,5 @@ footer {
   width: 100%;
   height: auto;
 }
+
 
