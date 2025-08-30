@@ -22,7 +22,8 @@ body {
 /* Header */
 .site-header {
   background-color: #f2f2f2;
-  padding: 10px 0;
+  padding: 0px;
+  text-align: center;
 }
 
 .site-logo {
@@ -129,3 +130,4 @@ footer {
     padding-top: 120px;
   }
 }
+
