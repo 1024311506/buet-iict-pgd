@@ -1,109 +1,78 @@
-/* Reset some basic elements */
+/* Reset & Base Styles */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #ffffff;
-  color: #333;
+  background-color: #f9f9f9;
+  padding: 0;
+  margin: 0;
 }
 
-/* Centered layout container */
-.container {
-  max-width: 990px;
-  margin: 0 auto;
-  padding: 0 16px;
+main {
+  padding: 150px 20px 40px; /* Desktop default */
+}
+
+img.ece {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 /* Header */
 .site-header {
-  background-color: #f2f2f2;
-  padding: 0px;
-  text-align: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
 }
 
 .site-logo {
   height: 60px;
-  
 }
 
-/* Navigation */
+/* Nav */
 nav {
   background-color: #004080;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  z-index: 999;
 }
 
 .nav-container {
-  padding: 3px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 5px;
-}
-
-.nav-links li {
-  flex: 1 1 auto;
-  text-align: center;
+  flex-wrap: wrap;
+  padding: 8px 0;
 }
 
 .nav-links li a {
-  display: block;
   color: white;
   text-decoration: none;
-  padding: 6px 4px;
-  font-size: 12px;
-  transition: background 0.3s;
+  font-size: 14px;
+  padding: 5px 8px;
+  transition: background 0.3s ease;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
   background-color: #0066cc;
-  font-weight: bold;
-}
-
-/* Main content */
-main {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.ece {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 20px auto;
-}
-
-/* Headings */
-h3, h4 {
-  margin: 20px 0 10px;
-}
-
-ul, ol {
-  margin: 10px 0 20px 20px;
-}
-
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-table, th, td {
-  border: 1px solid #ccc;
-}
-
-th, td {
-  padding: 10px;
-  text-align: center;
+  border-radius: 4px;
 }
 
 /* Footer */
@@ -111,26 +80,28 @@ footer {
   background-color: #004080;
   color: white;
   text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
+  padding: 20px;
   margin-top: 40px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .nav-links {
-    gap: 3px;
-  }
-
-  .nav-links li a {
-    font-size: 10px;
-    padding: 5px 2px;
-  }
-
+/* Responsive Styles */
+@media (max-width: 768px) {
   main {
     padding-top: 120px;
   }
+
+  .nav-links {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .nav-links li a {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
+  .site-logo {
+    height: 50px;
+  }
 }
-
-
-
