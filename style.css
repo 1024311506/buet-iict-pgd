@@ -161,7 +161,7 @@ footer {
 
   .nav-container {
     flex-wrap: nowrap; /* Keep nav items in one row */
-    gap: 8px; /* Reduced gap */
+    gap: 5px; /* Reduced gap */
     justify-content: center;
   }
 
@@ -170,8 +170,8 @@ footer {
   }
 
   .nav-links li a {
-    font-size: 12px; /* Smaller font */
-    padding: 4px 8px; /* Smaller padding */
+    font-size: 11px; /* Smaller font */
+    padding: 5px; /* Smaller padding */
   }
   
   .ece {
@@ -180,4 +180,5 @@ footer {
     height: auto;
   }
 }
+
 
