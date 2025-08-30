@@ -110,7 +110,7 @@ th, td {
 
 /* Footer */
 footer {
-  background-color: #004080;
+  background-color: rgb(160, 27, 48);
   color: white;
   text-align: center;
   padding: 15px 0;
@@ -131,6 +131,7 @@ footer {
 
   
 }
+
 
 
 
