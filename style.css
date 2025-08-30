@@ -30,6 +30,7 @@ body {
 
 .site-logo {
   height: 60px;
+  padding: 1px;
 }
 
 /* Navigation */
@@ -71,8 +72,8 @@ nav {
 
 /* Main content */
 main {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .ece {
@@ -130,6 +131,7 @@ footer {
 
   
 }
+
 
 
 
