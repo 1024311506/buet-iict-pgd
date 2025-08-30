@@ -24,14 +24,13 @@ body {
   left: 0;
   width: 100%;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 293px;
   background: #f4eacd;
   padding: 0;
-  z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1001;
 }
 
 .site-logo {
@@ -39,8 +38,11 @@ body {
   width: auto;
 }
 
-/* Adjust logo size on smaller screens */
 @media (max-width: 990px) {
+  .site-header {
+    margin-left: 0;
+  }
+
   .site-logo {
     height: 60px;
   }
@@ -53,25 +55,39 @@ nav {
   left: 0;
   width: 100%;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 293px;
   background: #f4eacd;
   z-index: 1000;
+  overflow-x: auto; /* allow horizontal scroll */
+}
+
+@media (max-width: 990px) {
+  nav {
+    margin-left: 0;
+  }
 }
 
 .nav-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   padding: 10px 0;
   gap: 20px;
+  overflow-x: auto; /* horizontal scroll if needed */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* prevent wrapping */
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  flex: 0 0 auto; /* prevent shrinking or growing */
 }
 
 .nav-links li a {
@@ -80,12 +96,14 @@ nav {
   font-weight: 600;
   padding: 6px 12px;
   border-radius: 5px;
-  transition: background 0.3s;
+  white-space: nowrap; /* prevent text wrapping */
+  display: block;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
   background-color: #ddd6b8;
+  border-bottom: 0;
 }
 
 /* Main content area */
@@ -103,7 +121,7 @@ section + section {
   margin-top: 20px;
 }
 
-h4 {
+h1, h2, h3, h4, h5, h6 {
   color: rgb(160, 27, 48);
   margin-bottom: 10px;
 }
@@ -140,19 +158,4 @@ footer {
   font-size: 0.9em;
   color: #666;
   padding: 20px 0;
-}
-
-/* Responsive layout */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: row;  /* keep horizontal */
-    flex-wrap: wrap;     /* allow wrapping if needed */
-    justify-content: center;
-    gap: 10px;           /* smaller gap on small screens */
-  }
-
-  /* Slightly reduce top padding for smaller screens */
-  body {
-    padding-top: 140px;
-  }
 }
