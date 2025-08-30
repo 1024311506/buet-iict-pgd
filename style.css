@@ -69,8 +69,8 @@ nav {
 
 /* Main content */
 main {
-  padding-top: 150px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .ece {
@@ -130,4 +130,5 @@ footer {
     padding-top: 120px;
   }
 }
+
 
