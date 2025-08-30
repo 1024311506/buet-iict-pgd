@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About IICT - BUET IICT PGD</title>
+  <title>BUET IICT PGD Program - Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="site-header">
     <a href="index.html">
       <img src="iict_buet_logo.png" alt="BUET IICT Logo" class="site-logo" />
@@ -15,37 +16,39 @@
 
   <nav>
     <div class="nav-container">
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About IICT</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-        <li><a href="students.html">Students</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="academics.html">Academics</a></li>
+
+        <li><a href="faculties.html">Faculties</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="admission.html">Admission</a></li>
+        <li><a href="about.html">About IICT</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-    <h2>About IICT</h2>
-    <p>
-      The Institute of Information and Communication Technology (IICT) is one of the institutes of Bangladesh University of Engineering and Technology. The Syndicate of BUET had taken the decision on 28th June 2001 to start the institute and the formal inaugural ceremony of the institute was held on 2nd September 2001. The syndicate had taken the decision following a decision of the government in order to produce more professionals in the IT sector. The erstwhile Computer Center of BUET has been taken as the backbone of the institute and the previous center has been modified accordingly to form the institute. The main objectives of the institute include offering Post Graduate programs in addition to the services as were provided by the erstwhile Computer Center.
-    </p>
-    <p>
-      The institute is located on the sixth and seventh floor of the ECE Building, BUET. Located within the serene environment of BUET, IICT is an ideal place for technology-based education. It is easily accessible by major roads from all parts of the city. Its proximity to residential areas, markets, universities, industries, and research centers makes it an excellent spot for its members to avail all their necessities.
-    </p>
-    <h3>Aims and Objectives of IICT</h3>
-    <p>
-      The purpose of the Institute is to provide a platform for teaching, learning and research in information and communication technology (ICT) that will contribute to industrial and infra-structural development, economic growth and prosperity. The aims and objectives of the IICT are:
-    </p>
-    <ul>
-      <li>To actively pursue advanced research in ICT in order to develop knowledge based products and services;</li>
-      <li>To develop ICT facilities in order to create an on-campus environment conducive to enthusiasm, innovation and enterprise, and to nurture innovative ideas and incubate promising initiatives;</li>
-      <li>To produce manpower and expertise in ICT by carrying out training in diverse areas for those interested to step in ICT profession as well as those already engaged in the profession; and</li>
-      <li>To provide consulting and advisory services to public and private organizations.</li>
-    </ul>
+    <div>
+      <img src="ece_building.png" alt="BUET ECE Building" class="ece" />
+    </div>
+    <h1>Welcome to BUET IICT Postgraduate Diploma (PG.Dip.) in Business IT Program</h1>
+    <p>This website provides information about the BUET IICT Postgraduate Diploma (Business IT) Program.</p>
+    <p>Use the navigation above to learn more, sign up, or see registered students.</p>
   </main>
 
   <footer>
     &copy; 2025 BUET IICT Postgraduate Diploma Program
   </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
+
+
+
