@@ -82,7 +82,7 @@ nav {
   color: #333;
   text-decoration: none;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 5px;
   transition: background 0.3s;
 }
@@ -171,7 +171,7 @@ footer {
 
   .nav-links li a {
     font-size: 11px; /* Smaller font */
-    padding: 5px; /* Smaller padding */
+    padding: 1px; /* Smaller padding */
   }
   
   .ece {
@@ -180,6 +180,7 @@ footer {
     height: auto;
   }
 }
+
 
 
 
