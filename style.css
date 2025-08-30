@@ -120,11 +120,16 @@ section + section {
   margin-top: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
   color: rgb(160, 27, 48);
   margin-bottom: 10px;
 }
-
+h3 {
+  color: rgb(160, 27, 48);
+  margin-bottom: 10px;
+  text-align: center;
+}
+    
 ul {
   padding-left: 20px;
 }
@@ -198,10 +203,8 @@ footer {
   height: auto;
 }
 
-h3{
-  text-align: center;
-}
-    
+
+
 
 
 
