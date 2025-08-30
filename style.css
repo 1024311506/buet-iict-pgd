@@ -23,11 +23,12 @@ body {
 .site-header {
   background-color: #f2f2f2;
   padding: 0px;
+  text-align: center;
 }
 
 .site-logo {
   height: 60px;
-  text-align: center;
+  
 }
 
 /* Navigation */
@@ -130,5 +131,6 @@ footer {
     padding-top: 120px;
   }
 }
+
 
 
