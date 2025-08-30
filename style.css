@@ -19,18 +19,18 @@ body {
 
 /* Fixed header with centered logo */
 .site-header {
-  position: fixed;
+  position: fixed; /* or absolute, depending on your layout */
   top: 0;
+  margin-left: 293px;
+  max-width: 900px;
   left: 0;
   width: 100%;
-  max-width: 900px;
-  margin-left: 293px;
   background: #f4eacd;
-  padding: 0;
+  padding: 0px;
+  z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1001;
 }
 
 .site-logo {
@@ -40,11 +40,13 @@ body {
 
 @media (max-width: 990px) {
   .site-header {
+    padding: 0;
+    justify-content: center; /* center logo */
     margin-left: 0;
   }
 
   .site-logo {
-    height: 60px;
+    height: 60px; /* smaller logo on smaller screens */
   }
 }
 
@@ -58,12 +60,18 @@ nav {
   margin-left: 293px;
   background: #f4eacd;
   z-index: 1000;
-  overflow-x: auto; /* allow horizontal scroll */
+  overflow-x: auto; /* horizontal scroll if needed */
 }
 
 @media (max-width: 990px) {
   nav {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    top: 60px; /* less space on mobile */
   }
 }
 
@@ -73,21 +81,24 @@ nav {
   align-items: center;
   flex-direction: row;
   padding: 10px 0;
-  gap: 20px;
-  overflow-x: auto; /* horizontal scroll if needed */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
-  flex-wrap: nowrap; /* prevent wrapping */
-  padding-left: 0;
-  margin: 0;
+  gap: 15px;
+  flex-wrap: nowrap; /* No wrapping, keep all in one row */
+  overflow-x: auto;  /* scroll horizontally if needed */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  scrollbar-width: none; /* Firefox */
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none; /* hide scrollbar for WebKit browsers */
 }
 
 .nav-links li {
-  flex: 0 0 auto; /* prevent shrinking or growing */
+  flex: 0 0 auto; /* keep items from shrinking */
 }
 
 .nav-links li a {
@@ -96,14 +107,14 @@ nav {
   font-weight: 600;
   padding: 6px 12px;
   border-radius: 5px;
-  white-space: nowrap; /* prevent text wrapping */
-  display: block;
+  transition: background 0.3s;
+  white-space: nowrap; /* prevent text wrap */
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
   background-color: #ddd6b8;
-  border-bottom: 0;
+  border-bottom: 0px solid #0066cc;
 }
 
 /* Main content area */
@@ -158,4 +169,16 @@ footer {
   font-size: 0.9em;
   color: #666;
   padding: 20px 0;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
 }
