@@ -35,7 +35,7 @@ body {
 
 /* Navigation */
 nav {
-  background-color: #004080;
+  background-color: #bf1430;
 }
 
 .nav-container {
@@ -66,7 +66,7 @@ nav {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  background-color: #0066cc;
+  background-color: #1096ff;
   font-weight: bold;
 }
 
@@ -131,6 +131,7 @@ footer {
 
   
 }
+
 
 
 
