@@ -21,6 +21,7 @@ body {
 .site-header {
   position: fixed; /* or absolute, depending on your layout */
   top: 0;
+  max-width: 900px;
   left: 0;
   width: 100%;
   background: #f4eacd;
@@ -52,7 +53,8 @@ justify-content: center;
 /* Fixed nav below header */
 nav {
   position: fixed;
-  top: 100px; /* height of header */
+  max-width: 900px;
+  top: 80px; /* height of header */
   left: 0;
   width: 100%;
   background: #f4eacd;
@@ -194,6 +196,7 @@ footer {
   width: 100%;
   height: auto;
 }
+
 
 
 
