@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Students - BUET IICT PGD</title>
+  <title>BUET IICT PGD Program - Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="site-header">
     <a href="index.html">
       <img src="iict_buet_logo.png" alt="BUET IICT Logo" class="site-logo" />
@@ -15,15 +16,38 @@
 
   <nav>
     <div class="nav-container">
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="academics.html">Academics</a></li>
+
+        <li><a href="faculties.html">Faculties</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="admission.html">Admission</a></li>
         <li><a href="about.html">About IICT</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-        <li><a href="students.html" class="active">Students</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
-    <h2>Registered Students</h2>
-    <div id="students
+    <div>
+      <img src="ece_building.png" alt="BUET ECE Building" class="ece" />
+    </div>
+    <h1>Welcome to BUET IICT Postgraduate Diploma (PG.Dip.) in Business IT Program</h1>
+    <p>This website provides information about the BUET IICT Postgraduate Diploma (Business IT) Program.</p>
+    <p>Use the navigation above to learn more, sign up, or see registered students.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 BUET IICT Postgraduate Diploma Program
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>
+
+
