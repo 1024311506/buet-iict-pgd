@@ -10,13 +10,14 @@ body {
   line-height: 1.6;
   background-color: #ffffff;
   color: #333;
+  
 }
 
 /* Centered layout container */
 .container {
   max-width: 990px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 20px;
 }
 
 /* Header */
@@ -130,5 +131,6 @@ footer {
     padding-top: 120px;
   }
 }
+
 
 
