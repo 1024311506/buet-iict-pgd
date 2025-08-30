@@ -28,10 +28,10 @@ body {
   margin-right: auto;
   background: #f4eacd;
   padding: 0;
+  z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1001;
 }
 
 .site-logo {
@@ -39,10 +39,8 @@ body {
   width: auto;
 }
 
+/* Adjust logo size on smaller screens */
 @media (max-width: 990px) {
-  .site-header {
-    padding: 0;
-  }
   .site-logo {
     height: 60px;
   }
@@ -69,16 +67,13 @@ nav {
   gap: 20px;
 }
 
-/* Nav links - horizontal by default */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-/* Nav links styling */
 .nav-links li a {
   color: #333;
   text-decoration: none;
@@ -147,15 +142,16 @@ footer {
   padding: 20px 0;
 }
 
-/* Responsive layout: stack nav links vertically on small screens */
+/* Responsive layout */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-  .ece {
-    width: 100%;
-    height: auto;
+  
+  /* Reduce padding and font size on smaller screens */
+  body {
+    padding-top: 140px;
   }
 }
