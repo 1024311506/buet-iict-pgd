@@ -178,3 +178,9 @@ footer {
 
   .nav-links.nav-open {
     display: flex;
+
+.ece {
+  display: block;
+  width: 100%;
+  height: auto;
+}
